@@ -1,0 +1,42 @@
+## Understanding Atomic Design: Page Level Components
+
+### The Goal of Page Components
+
+Page components in atomic design represent complete, high-fidelity representations of entire web pages. They assemble templates with actual content and serve as the final stage in atomic design. The goals of page components are:
+
+1. **Realistic Context**: Pages provide the highest level of fidelity, showcasing how components, molecules, organisms, and templates come together to form a complete page.
+
+2. **Content Specificity**: Pages contain real content, enabling developers to see how various design elements work with actual data and assets.
+
+3. **Testing and Validation**: They allow for end-to-end testing of how different components interact and ensure the overall UI and UX meet the application's requirements.
+
+### Using Pages with Storybook
+
+Using pages in Storybook provides a holistic view of the application:
+
+1. **Stop at Template Level**: Some projects may prefer to stop visualizing components at the template level to avoid replicating the application in Storybook.
+
+2. **Separate Storybook for Pages**: Others may maintain a separate Storybook instance for pages to focus on the specific design and content of full pages.
+
+3. **Combined Storybook**: Some projects might prefer to use a single Storybook instance, covering everything from atoms to pages, for a unified design system.
+
+### Example: Home Page Component
+
+Here's a simplified example of a page component that combines a template with specific content:
+
+```jsx
+// HomePage.jsx
+import React from 'react';
+import DashboardTemplate from './DashboardTemplate';
+
+const HomePage = () => {
+  return (
+    <DashboardTemplate>
+      <h1>Welcome to the Dashboard</h1>
+      <p>This is the home page of the application.</p>
+    </DashboardTemplate>
+  );
+};
+
+export default HomePage;
+```

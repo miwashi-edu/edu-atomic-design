@@ -1,0 +1,39 @@
+## React Hooks and Their Use in Atomic Design
+
+### **Atoms**
+- **`useState`**:
+  - Often used to manage state for individual atom components, such as toggling a button or managing the value of an input field.
+
+### **Molecules**
+- **`useState`**:
+  - Still frequently used here, especially to handle state for interactive molecules (e.g., forms, dropdowns).
+- **`useEffect`**:
+  - Sometimes used to handle side effects that occur within a molecule, such as fetching suggestions for an autocomplete component.
+
+### **Organisms**
+- **`useState`**:
+  - Managing the internal state of an organism, such as a complex form or a modal dialog.
+- **`useEffect`**:
+  - More commonly used here to handle data fetching, subscriptions, or manual DOM manipulation needed for the organism to function.
+- **`useNavigate`**:
+  - Used to handle navigation logic within an organism, such as redirecting to a different route when a user interacts with a component
+  (e.g., clicking on a card to navigate to a detail page).
+
+### **Templates**
+- **`useContext`**:
+  - Useful for sharing state or configurations across various organisms within a template.
+- **`useEffect`**:
+  - Often used to manage data fetching that affects multiple organisms displayed in the template.
+- **`useReducer`**:
+  - May be used to manage more complex state transitions involving multiple organisms within a template.
+
+### **Pages**
+- **`useContext`**:
+  - For managing global state that affects the entire page, such as theme or user authentication data.
+- **`useEffect`**:
+  - Heavily used for handling global side effects, like fetching data necessary for the entire page.
+- **`useReducer`**:
+  - Suitable for managing the overall state of the page, especially if there are complex state changes that involve multiple templates or organisms.
+- **`useNavigate`**:
+  - Utilized to handle routing between different pages, ensuring smooth navigation throughout the application.
+

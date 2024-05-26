@@ -1,0 +1,18 @@
+.logoImage {
+    width: auto;               /* Adjusted to use width and height props */
+    height: auto;              /* Maintain aspect ratio */
+    fill: currentColor;        /* Use current color for fill */
+    margin-right: 10px;        /* Space between image and text */
+}
+
+.logoImage:hover {
+    fill: #007BFF;             /* Change color on hover */
+    transition: fill 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .logoImage {
+        width: 80px;           /* Smaller size for mobile */
+    }
+}

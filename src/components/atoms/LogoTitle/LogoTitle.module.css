@@ -1,0 +1,43 @@
+.logoTitle {
+    font-size: 24px;               /* Default font size */
+    color: inherit;                /* Use inherited color */
+    font-weight: bold;             /* Bold text */
+    font-family: inherit;          /* Use inherited font family */
+    display: flex;                 /* Use flexbox for alignment */
+    align-items: center;           /* Default vertical alignment */
+    justify-content: flex-start;   /* Default horizontal alignment */
+    writing-mode: horizontal-tb;   /* Default writing mode */
+    text-orientation: mixed;       /* Default text orientation */
+}
+
+/* Size variations */
+.logoTitle--small {
+    font-size: 16px;               /* Small font size */
+}
+
+.logoTitle--medium {
+    font-size: 24px;               /* Medium font size */
+}
+
+.logoTitle--large {
+    font-size: 32px;               /* Large font size */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .logoTitle {
+        font-size: 20px;           /* Smaller font size for mobile */
+    }
+
+    .logoTitle--small {
+        font-size: 14px;           /* Adjusted small font size for mobile */
+    }
+
+    .logoTitle--medium {
+        font-size: 20px;           /* Adjusted medium font size for mobile */
+    }
+
+    .logoTitle--large {
+        font-size: 28px;           /* Adjusted large font size for mobile */
+    }
+}

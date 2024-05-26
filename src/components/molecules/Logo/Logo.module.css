@@ -1,0 +1,39 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo--left {
+    flex-direction: row-reverse;
+}
+
+.logo--right {
+    flex-direction: row;
+}
+
+.logo--top {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.logo--bottom {
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo--noText {
+    align-items: center;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .logoImage {
+        margin-right: 0;
+        margin-bottom: 10px; /* Add space below the image */
+    }
+}

@@ -1,0 +1,46 @@
+## Understanding Atomic Design: Template Level Components
+
+### The Goal of Template Components
+
+Template components in atomic design represent structured layouts that arrange organisms, molecules, and atoms into predefined layouts. They do not contain actual content but instead define the structure of a page or section. The goals of template components are:
+
+1. **Scalable Structure**: Templates define a consistent structure for pages, allowing content and components to fit seamlessly into their predefined slots.
+
+2. **Reusability**: They are reusable layouts that can be adapted across multiple pages by populating them with different content or components.
+
+3. **Consistency**: By defining consistent layouts, templates ensure that pages have a cohesive structure, enhancing the user experience.
+
+4. **Flexibility**: Templates act as blueprints, making it easy to switch or rearrange components without affecting the overall layout.
+
+### Using Templates with Storybook
+
+Storybook can be used to visualize templates to understand how different components will appear in their slots:
+
+1. **Organism-Level Storybook**: Some projects may choose to stop visualizing components at the organism level in Storybook, focusing on smaller-scale UI components.
+
+2. **Separate Storybook for Templates**: Others may prefer to separate templates into a different Storybook setup, ensuring that complex layouts don't overwhelm the component library.
+
+3. **Combined Storybook**: A single Storybook instance can be used to include both organisms and templates, enabling a comprehensive view of the design system.
+
+### Example: Dashboard Template
+
+A typical example of a template is a Dashboard layout:
+
+```jsx
+// DashboardTemplate.jsx
+import React from 'react';
+import Header from './Header';
+import Sidebar from './Sidebar';
+
+const DashboardTemplate = ({ children }) => {
+  return (
+    <div className="dashboard-layout">
+      <Header />
+      <Sidebar />
+      <main>{children}</main>
+    </div>
+  );
+};
+
+export default DashboardTemplate;
+```
