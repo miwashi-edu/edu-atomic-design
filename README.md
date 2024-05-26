@@ -21,7 +21,7 @@ npm start
 [Compare with](https://github.com/miwashi-edu/edu-components-done)
 
 
-## A story
+## A [story](https://storybook.js.org/blog/component-story-format-3-0/)
 
 ```js
 import React from 'react';
